@@ -4,7 +4,7 @@
 
 <button
   class="btn shadow-md"
-  on:click={() => window.open("https://github.com/mikearche")}
+  on:click={() => window.open("https://github.com/ArcherScript")}
 >
   <Github size="24" />
   Github
