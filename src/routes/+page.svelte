@@ -21,7 +21,7 @@
       <Twitter />
       <Github />
       <Linkedin />
-      <Milk />
+      <!-- <Milk /> -->
     </div>
   </div>
 </div>
