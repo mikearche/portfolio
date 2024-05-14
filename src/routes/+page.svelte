@@ -15,6 +15,7 @@
 
   :global(body) {
     height: 100%;
+    cursor: url("./../shared/assets/hand_small_point.png"), auto;
   }
 
   @keyframes pan {
