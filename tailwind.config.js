@@ -2,7 +2,11 @@
 export default {
   content: ["./src/**/*.{html,js,svelte,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        pattern: "url('./src/shared/assets/pattern.png')",
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
