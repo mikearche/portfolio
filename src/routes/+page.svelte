@@ -1,13 +1,53 @@
+<script lang="ts">
+  import Twitter from "./../shared/assets/Twitter.png";
+  import Linkedin from "./../shared/assets/LinkedIn.png";
+  import Github from "./../shared/assets/Github.png";
+</script>
+
 <div class="h-full w-screen element">
+  <div class="bg-white absolute z-10"></div>
   <div class="wrap h-[80%]">
     <div class="h-full w-screen shadow-xl pattern">
       <div class="gradient" />
       <div class="h-full bg-pattern bg-repeat move" />
     </div>
   </div>
+  <div class="info-modal">
+    <div class="flex flex-col justify-between items-center h-full">
+      <h1>Bea</h1>
+      <div class="flex flex-row gap-4">
+        <a
+          class="info-button"
+          href="https://x.com/archer_script"
+          target="_blank"
+        >
+          <img src={Twitter} alt="icon for twitter" />
+        </a>
+        <a
+          class="info-button"
+          href="https://github.com/archerscript"
+          target="_blank"
+        >
+          <img src={Github} alt="icon for twitter" class="w-6 h-6" />
+        </a>
+        <a
+          class="info-button"
+          href="https://linkedin.com/in/beaarcher"
+          target="_blank"
+        >
+          <img src={Linkedin} alt="icon for twitter" />
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <style lang="postcss">
+  @font-face {
+    font-family: "KenneyPixel";
+    src: url("./../shared/assets/Kenney_Pixel.ttf");
+  }
+
   :global(html) {
     height: 100%;
     background-color: #f0f0f3;
@@ -16,6 +56,7 @@
   :global(body) {
     height: 100%;
     cursor: url("./../shared/assets/hand_small_point.png"), auto;
+    font-family: "KenneyPixel";
   }
 
   @keyframes pan {
@@ -164,5 +205,65 @@
       #dbcdf0 100%
     );
     animation: pan 360s linear infinite;
+  }
+
+  .info-modal {
+    position: absolute;
+    z-index: 10;
+    top: 100%; /* Start from the bottom of the screen */
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: white;
+    padding: 1rem;
+    border: 3px solid black; /* Adjust as needed */
+    border-top-right-radius: 25px; /* Adjust as needed */
+    border-bottom-left-radius: 25px; /* Adjust as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slide-in 1s forwards;
+    background-size: 50px 50px;
+    height: 250px;
+    width: 400px;
+    background-image: linear-gradient(
+      #18181b 25%,
+      #27272a 25%,
+      #27272a 50%,
+      #18181b 50%,
+      #18181b 75%,
+      #27272a 75%,
+      #27272a 100%
+    );
+    color: white;
+    font-size: 2rem;
+    text-shadow:
+      -1px 0 black,
+      0 1px black,
+      1px 0 black,
+      0 -1px black;
+  }
+
+  @keyframes slide-in {
+    0% {
+      top: 100%;
+      transform: translate(-50%, 0);
+    }
+    100% {
+      top: 35%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .info-button {
+    border: 2px solid transparent; /* Inner transparent border */
+    padding: 0.375rem;
+    border-radius: 0.25rem;
+    background-color: white;
+    box-shadow: 0 0 0 2px white; /* Outer black border */
+    background-clip: padding-box;
+    transition: transform 0.3s ease;
+    cursor: inherit;
+  }
+
+  .info-button:hover {
+    transform: scale(1.1);
   }
 </style>
