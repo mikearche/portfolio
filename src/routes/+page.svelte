@@ -9,7 +9,7 @@
   <div class="wrap h-[80%]">
     <div class="h-full w-screen shadow-xl pattern">
       <div class="gradient" />
-      <div class="h-full bg-pattern bg-repeat move" />
+      <div class="h-full bg-repeat move" />
     </div>
   </div>
   <div class="info-modal">
@@ -69,6 +69,7 @@
   }
 
   .move {
+    background-image: url("./../shared/assets/pattern.png");
     animation: pan 180s linear infinite;
   }
 

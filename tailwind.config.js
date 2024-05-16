@@ -1,13 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{html,js,svelte,ts}"],
-  theme: {
-    extend: {
-      backgroundImage: {
-        pattern: "url('./src/shared/assets/pattern.png')",
-      },
-    },
-  },
+  theme: {},
   plugins: [require("daisyui")],
   daisyui: {
     themes: [
