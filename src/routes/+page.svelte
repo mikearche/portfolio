@@ -16,16 +16,12 @@
     <div class="flex flex-col justify-between items-center h-full">
       <h1>Bea</h1>
       <div class="flex flex-row gap-4">
-        <a
-          class="info-button"
-          href="https://x.com/archer_script"
-          target="_blank"
-        >
+        <a class="info-button" href="https://x.com/_B_E_A_F_" target="_blank">
           <img src={Twitter} alt="icon for twitter" />
         </a>
         <a
           class="info-button"
-          href="https://github.com/archerscript"
+          href="https://github.com/B-E-A-F"
           target="_blank"
         >
           <img src={Github} alt="icon for twitter" class="w-6 h-6" />
